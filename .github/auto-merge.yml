@@ -1,0 +1,30 @@
+# Configuration for probot-auto-merge - https://github.com/bobvanderlinden/probot-auto-merge
+
+# The minimum number of reviews from each association approving the PR before doing an automatic merge.
+# For more information see: https://developer.github.com/v4/enum/commentauthorassociation/
+minApprovals:
+  NONE: 0
+
+# Whether an out-of-date pull request is automatically updated.
+updateBranch: false
+
+# Whether to show the status of the auto-merge process in each PR as a check.
+reportStatus: true
+
+# Whether the pull request branch is automatically deleted.
+deleteBranchAfterMerge: false
+
+# In what way a pull request needs to be merged.
+# For more information see https://help.github.com/articles/about-pull-request-merges/
+mergeMethod: merge
+
+# Blocking labels are the labels that can be attached to a pull request to make sure the pull request
+# is not being automatically merged.
+blockingLabels:
+- "Change destination branch"
+- "Do Not Merge"
+- "Needs Discussion"
+- "WIP"
+
+# Automatic merges require that there is a match between the regular expression and title
+requiredBodyRegex: "^Trigger bot.+$"
