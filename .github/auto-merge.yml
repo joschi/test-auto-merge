@@ -26,3 +26,6 @@ blockingLabels:
 
 # Automatic merges require that there is a match between the regular expression and title
 requiredTitleRegex: "^Trigger bot.*$"
+
+blockingBranches:
+- "^develop$"
