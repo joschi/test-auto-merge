@@ -21,10 +21,8 @@ mergeMethod: merge
 # Blocking labels are the labels that can be attached to a pull request to make sure the pull request
 # is not being automatically merged.
 blockingLabels:
-- "Change destination branch"
-- "Do Not Merge"
-- "Needs Discussion"
-- "WIP"
+- "invalid"
+- "wontfix"
 
 # Automatic merges require that there is a match between the regular expression and title
-requiredBodyRegex: "^Trigger bot.+$"
+requiredTitleRegex: "^Trigger bot.*$"
